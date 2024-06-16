@@ -1,3 +1,4 @@
+//using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Sales.API.Data;
 
@@ -28,10 +29,10 @@ app.UseAuthorization();
 app.MapControllers();
 
 
-app.UseCors(x => x
-.AllowAnyMethod()
-.AllowAnyHeader()
-.SetIsOriginAllowed(origin => true)
-.AllowCredentials());
+    app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true)
+    .AllowCredentials());
 
 app.Run();
